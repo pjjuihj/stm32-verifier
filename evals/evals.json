@@ -1,0 +1,23 @@
+{
+  "skill_name": "stm32-verifier",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "快速验证 scope-siggen 项目的初始化和并发安全",
+      "expected_output": "JSON 报告，包含 62 项检查结果，识别出启动顺序、DMA 链接等已知问题",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "检查 oscilloscope.c 的 DMA 缓冲区代码",
+      "expected_output": "JSON 报告，识别出 process_ptr/process_len 竞态、缺少 __DMB() 等问题",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "全量验证 STM32F407 项目的 ADC/DAC 配置",
+      "expected_output": "JSON 报告，包含编译结果和静态检查结果",
+      "files": []
+    }
+  ]
+}
